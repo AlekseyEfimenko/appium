@@ -1,6 +1,5 @@
 package pm.academy.configuration.types;
 
-
 import pm.academy.device.DeviceType;
 
 import static pm.academy.configuration.types.RunType.CLOUD;

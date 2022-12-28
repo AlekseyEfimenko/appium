@@ -1,14 +1,14 @@
 package pm.academy.entity;
 
+import static java.lang.String.format;
+import static pm.academy.configuration.types.RunType.LOCAL;
+import static pm.academy.device.DeviceType.ANDROID;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import pm.academy.configuration.capabilities.CapabilitiesReader;
 
 import java.io.IOException;
-
-import static java.lang.String.format;
-import static pm.academy.configuration.types.RunType.LOCAL;
-import static pm.academy.device.DeviceType.ANDROID;
 
 public class Emulator {
 

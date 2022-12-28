@@ -1,8 +1,8 @@
 package pm.academy.configuration;
 
-import org.aeonbits.owner.Config;
-
 import static org.apache.commons.lang3.StringUtils.EMPTY;
+
+import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({"classpath:data/testdata.properties", "classpath:data/credentials.properties"})
@@ -14,6 +14,9 @@ public interface TestData extends Config {
 
     @Key("local.appiumPort")
     int appiumPort();
+
+    @Key(("local.path"))
+    String localPath();
 
     // Available branches: 'master', 'staging' or 'develop'
     @DefaultValue(EMPTY)

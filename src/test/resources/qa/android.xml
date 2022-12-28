@@ -2,19 +2,12 @@
 
 
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Android QA Suite" parallel="tests" thread-count="2">
-    <test name="1st thread">
+<suite name="Android QA Suite">
+    <test name="betTest">
         <parameter name="UDID" value="emulator-5554"/>
-        <parameter name="DeviceName" value="Pixel_2_API_30"/>
+        <parameter name="DeviceName" value="Pixel_6_Pro_API_33_2"/>
         <classes>
             <class name="pm.academy.cases.AcademyTests"/>
-        </classes>
-    </test>
-    <test name="2nd thread">
-        <parameter name="UDID" value="emulator-5556"/>
-        <parameter name="DeviceName" value="Pixel_2_API_30_2"/>
-        <classes>
-            <class name="pm.academy.cases.AcademyTests2"/>
         </classes>
     </test>
 </suite>

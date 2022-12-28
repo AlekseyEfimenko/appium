@@ -51,4 +51,7 @@ public interface Capabilities extends Config {
 
     @Key("${deviceType}.${runType}.wda")
     String wda();
+
+    @Key("${deviceType}.${runType}.autoGrantPermissions")
+    String autoGrantPermissions();
 }

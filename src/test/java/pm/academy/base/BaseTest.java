@@ -1,13 +1,19 @@
 package pm.academy.base;
 
-import org.testng.annotations.*;
+import static pm.academy.driver.DriverManager.getDriver;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import pm.academy.driver.DriverManager;
+import pm.academy.steps.TestSteps;
 
 import java.net.MalformedURLException;
 
-import static pm.academy.driver.DriverManager.getDriver;
-
 public class BaseTest {
+    protected TestSteps steps = new TestSteps();
 
     @BeforeTest(alwaysRun = true)
     @Parameters({"UDID", "WDA", "DeviceName", "PlatformVersion"})
@@ -27,7 +33,7 @@ public class BaseTest {
     @Parameters("UDID")
     public void closeSession(@Optional String udid) {
         DriverManager.terminateDriver();
-        DriverManager.terminateAppium();
+//        DriverManager.terminateAppium();
 //        DriverManager.terminateEmulator(udid);
     }
 
